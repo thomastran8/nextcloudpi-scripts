@@ -1,0 +1,10 @@
+[Unit]
+Description=Restarts nextcloudpi docker server
+
+[Service]
+Type=oneshot
+ExecStart=/home/pi/nextcloudpi-scripts/restart-nextcloudpi.sh
+
+[Install]
+WantedBy=multi-user.target
+
