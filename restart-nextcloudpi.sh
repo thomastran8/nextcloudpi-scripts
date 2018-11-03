@@ -1,7 +1,6 @@
 #!/bin/bash
 
 directory=/home/pi/nextcloudpi-scripts
-mount=/mnt
 
 echo "-----------------------------------
 Running nextcloudpi-restart script!
@@ -23,12 +22,7 @@ else
 fi
 
 # Mount a USB
-if ! grep -qs "$mount" /proc/mounts; then
-	echo \* Mounting USB on $mount
-	sudo mount /dev/sda1 $mount
-else
-	echo \* USB already mounted or no USB found.
-fi
+./usb-plug.sh
 
 echo "
 Finished nextcloudpi-restart script!
