@@ -2,6 +2,9 @@
 
 directory=/home/pi/nextcloudpi-scripts
 
+# Wait for docker daemon
+sleep 20
+
 echo "-----------------------------------
 Running nextcloudpi-restart script!
 "
@@ -21,9 +24,7 @@ else
 	echo \* Nextcloudpi server already up, no action taken.
 fi
 
-# Mount a USB
-./usb-plug.sh
-
 echo "
 Finished nextcloudpi-restart script!
 -----------------------------------"
+
