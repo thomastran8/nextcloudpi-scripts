@@ -4,11 +4,11 @@ services:
     image: ownyourbits/nextcloudpi-armhf
     command: "nextcloud.thomasmtran.me"
     ports:
-     - "80:80"
-     - "443:443"
-     - "4443:4443"
+      - "80:80"
+      - "443:443"
+      - "4443:4443"
     volumes:
-     - ncdata:/data
+      - ncdata:/data
     container_name: nextcloudpi
 
 volumes:

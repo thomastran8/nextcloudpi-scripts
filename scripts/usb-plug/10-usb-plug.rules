@@ -1,2 +1,1 @@
 ACTION=="add", SUBSYSTEM=="block", KERNEL=="sd[a-z]1", SYMLINK+="usbflash", TAG+="systemd", ENV{SYSTEMD_WANTS}+="usb-plug.service"
-

@@ -5,4 +5,3 @@ Type=oneshot
 ExecStart=/home/pi/nextcloudpi-scripts/usb-plug.sh
 [Install]
 WantedBy=multi-user.target
-

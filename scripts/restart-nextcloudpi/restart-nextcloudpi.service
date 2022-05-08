@@ -7,4 +7,3 @@ ExecStart=/home/pi/nextcloudpi-scripts/restart-nextcloudpi.sh
 
 [Install]
 WantedBy=multi-user.target
-
