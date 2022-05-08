@@ -18,10 +18,10 @@ The NextCloudPi project provides [Docker Run instructions](https://github.com/ne
 
         For example, `DOMAIN=0.0.0.0` will make Nextcloud available at `localhost`.
 
-2. Starting Docker container:
+2. Starting Docker container, depending on your CPU architecture:
 
     ```bash
-    docker-compose up -d ide
+    docker-compose up -d ncp-<armhf|x86>
     ```
 
 3. Activation:
