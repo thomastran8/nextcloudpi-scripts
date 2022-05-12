@@ -6,10 +6,10 @@ The NextCloudPi project provides [Docker Run instructions](https://github.com/ne
 
 ## Getting started
 
-1. Clone the repository to raspberry pi's home
-    > Maintenance script directory paths are hardcoded to the pi's home
-    
-    ```
+1. Clone the repository to raspberry pi's home folder.
+    > Directory paths of the maintenance script are hardcoded to this folder.
+
+    ```bash
     cd /home/pi
     git clone https://github.com/thomastran8/nextcloudpi-scripts.git
     ```
@@ -42,7 +42,7 @@ Check out the `scripts/` folder, for utils to help you with maintenance.
 
 - Enable automatic usb mounting to `/mnt` (For hot-plugging a usb-drive as a backup):
 
-    ```
+    ```bash
     cd scripts/usb-plug/
     ./setup.sh
     ```
@@ -50,7 +50,8 @@ Check out the `scripts/` folder, for utils to help you with maintenance.
 - Enable daily automatic data backup at midnight to `/mnt` (usb-drive):
 
     > In cases where your SD card fails, this is a good local backup.
-    ```
+
+    ```bash
     cd scripts/backup/
     nano crontab.txt
     <copy contents>
@@ -61,7 +62,8 @@ Check out the `scripts/` folder, for utils to help you with maintenance.
 - Enable automatic restart on boot:
 
     > In cases where you need to reboot the raspberry pi, the docker container should come back up.
-    ```
+
+    ```bash
     cd scripts/restart-nextcloudpi
     ./setup.sh
     ```
