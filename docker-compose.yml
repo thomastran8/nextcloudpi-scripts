@@ -3,6 +3,7 @@ version: '3'
 services:
 
   ncp-arm:
+    env_file: .env
     image: ownyourbits/nextcloudpi-armhf
     container_name: nextcloudpi-armhf
     command: $DOMAIN
