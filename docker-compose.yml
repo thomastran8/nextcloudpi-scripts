@@ -1,15 +1,32 @@
 version: '3'
+
 services:
-  nextcloudpi:
+
+  ncp-arm:
+    env_file: .env
     image: ownyourbits/nextcloudpi-armhf
-    command: "nextcloud.thomasmtran.me"
+    container_name: nextcloudpi-armhf
+    command: $DOMAIN
     ports:
-     - "80:80"
-     - "443:443"
-     - "4443:4443"
+      - "80:80"
+      - "443:443"
+      - "4443:4443"
     volumes:
-     - ncdata:/data
-    container_name: nextcloudpi
+      - ncdata:/data
+    restart: always
+
+  ncp-x86:
+    env_file: .env
+    image: ownyourbits/nextcloudpi-x86
+    container_name: nextcloudpi-x86
+    command: $DOMAIN
+    ports:
+      - "80:80"
+      - "443:443"
+      - "4443:4443"
+    volumes:
+      - ncdata:/data
+    restart: always
 
 volumes:
   ncdata:

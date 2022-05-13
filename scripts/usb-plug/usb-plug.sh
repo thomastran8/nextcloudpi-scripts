@@ -11,4 +11,3 @@ if ! mountpoint -q /mnt; then
 else
 	echo \* USB already mounted or no USB found.
 fi
-
